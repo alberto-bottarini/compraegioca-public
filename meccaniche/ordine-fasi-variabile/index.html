@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ordine fasi variabile — 87 giochi da tavolo | CompraeGioca</title>
+  <meta name="description" content="87 giochi da tavolo con la meccanica "Ordine fasi variabile". L'ordine in cui si svolgono le fasi del turno cambia da partita a partita o viene scelto dai giocatori. Adattare la strategia all'ordine delle fasi è fondamentale." />
+  <meta property="og:title" content="Ordine fasi variabile — 87 giochi da tavolo | CompraeGioca" />
+  <meta property="og:description" content="87 giochi da tavolo con la meccanica "Ordine fasi variabile". L'ordine in cui si svolgono le fasi del turno cambia da partita a partita o viene scelto dai giocatori. Adattare la strategia all'ordine delle fasi è fondamentale." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CompraeGioca" />
+  <link rel="canonical" href="https://www.compraegioca.com/meccaniche/ordine-fasi-variabile/" />
+  <meta property="og:url" content="https://www.compraegioca.com/meccaniche/ordine-fasi-variabile/" />
+  <link rel="shortcut icon" type="image/png" href="/favicon/favicon-16x16" />
+  <link href="/favicon/apple-logo-57x57.png" rel="apple-touch-icon" />
+  <link href="/favicon/apple-logo-60x60.png" rel="apple-touch-icon" sizes="60x60" />
+  <link href="/favicon/apple-logo-72x72.png" rel="apple-touch-icon" sizes="72x72" />
+  <link href="/favicon/apple-logo-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+  <link href="/favicon/apple-logo-114x114.png" rel="apple-touch-icon" sizes="114x114" />
+  <link href="/favicon/apple-logo-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+  <link href="/favicon/apple-logo-144x144.png" rel="apple-touch-icon" sizes="144x144" />
+  <link href="/favicon/apple-logo-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+  <link href="/favicon/apple-logo-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="/favicon/android-logo-128x128.png" rel="icon" sizes="128x128" />
+  <link href="/favicon/android-logo-192x192.png" rel="icon" sizes="192x192" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#EBC01C" />
+  <link rel="stylesheet" href="/assets/style.css?v=mtldjs5a" />
+  <script>
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied', wait_for_update: 500 });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLJSKG3SWM"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-LLJSKG3SWM');
+  </script>
+</head>
+<body>
+  <div class="header-accent"></div>
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo-link">
+        <img src="/logo.png" alt="CompraeGioca" class="logo-img" />
+      </a>
+      <nav class="header-nav">
+        <a href="/come-funziona">Come funziona</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+  <div class="game-detail">
+    <div class="tag-hero">
+      <span class="tag-type-label">Meccanica</span>
+      <h1 class="game-title">Ordine fasi variabile <span class="tag-en">Variable Phase Order</span></h1>
+      <p class="tag-desc">L'ordine in cui si svolgono le fasi del turno cambia da partita a partita o viene scelto dai giocatori. Adattare la strategia all'ordine delle fasi è fondamentale.</p>
+      <p class="tag-count"><strong>87</strong> giochi</p>
+    </div>
+    <div class="similar-grid">
+      
+      <a href="/giochi/twilight-imperium-fourth-edition/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/_Ppn5lssO5OaildSE-FgFA__original/img/kVpZ0Maa_LeQGWxOqsYKP3N4KUY=/0x0/filters:format(jpeg)/pic3727516.jpg" alt="Twilight Imperium: Fourth Edition" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Twilight Imperium: Fourth Edition</div>
+          <div class="similar-rank">#7 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/kanban-ev/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/L2Wn-zUqkcHgqvwvY212Ig__original/img/Htra4hvxjBlejtNEIUns_B3CNNc=/0x0/filters:format(jpeg)/pic4924232.jpg" alt="Kanban EV" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Kanban EV</div>
+          <div class="similar-rank">#42 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/puerto-rico/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/QFiIRd2kimaMqTyWsX0aUg__original/img/DOgIp57F7tKZvxeITGAd3e_Q9as=/0x0/filters:format(jpeg)/pic158548.jpg" alt="Puerto Rico" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Puerto Rico</div>
+          <div class="similar-rank">#57 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/on-mars/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/Nm0Iw8NoiM9V8IsifimGBw__original/img/GNjjsgxq7wYO9pSIteDJe6Sxt00=/0x0/filters:format(jpeg)/pic4357658.jpg" alt="On Mars" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">On Mars</div>
+          <div class="similar-rank">#58 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/race-for-the-galaxy/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/-DOqixs8uwKUvvWPKI4f9w__original/img/Vh-DCkTPa8OU45LaJdUywwhiYqE=/0x0/filters:format(jpeg)/pic5261714.jpg" alt="Race for the Galaxy" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Race for the Galaxy</div>
+          <div class="similar-rank">#94 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/eclipse-new-dawn-for-the-galaxy/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/cnFppsVNOSTJ-W3APQFuTg__original/img/AbcjscBi-x3tVrsJsBhXq2RxLbc=/0x0/filters:format(jpeg)/pic1974056.jpg" alt="Eclipse: New Dawn for the Galaxy" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Eclipse: New Dawn for the Galaxy</div>
+          <div class="similar-rank">#105 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/aeon-039-s-end/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/d50LceHj6LIafa4S_qIsCg__original/img/4MsKNGm47PU9BGW4i2yamMlRSQ0=/0x0/filters:format(jpeg)/pic3189350.jpg" alt="Aeon&amp;#039;s End" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Aeon&amp;#039;s End</div>
+          <div class="similar-rank">#108 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/carnegie/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/0qxz9DRRhsJrIW1TJ-kz0w__original/img/PzsJsCLfGGo4IG3v43VPvH_etPw=/0x0/filters:format(jpeg)/pic5710736.jpg" alt="Carnegie" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Carnegie</div>
+          <div class="similar-rank">#128 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/aeon-039-s-end-war-eternal/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/H2st1bZH4O0FM46NhKMqyQ__original/img/wR0VHD6Svlp34wxKN6OHV4YZZgM=/0x0/filters:format(jpeg)/pic3430893.jpg" alt="Aeon&amp;#039;s End: War Eternal" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Aeon&amp;#039;s End: War Eternal</div>
+          <div class="similar-rank">#150 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/twilight-imperium-third-edition/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/MHeQQrbauUVsvh2QF6PMog__original/img/LfjXNSzbVuSmMfcRYwGcuZwFHZo=/0x0/filters:format(jpeg)/pic4128153.jpg" alt="Twilight Imperium: Third Edition" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Twilight Imperium: Third Edition</div>
+          <div class="similar-rank">#151 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/rising-sun/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/iwevA6XmiNLHn1QnGUucqw__original/img/pKJ1XyLN4hvHim5eRj2VJHijv1E=/0x0/filters:format(jpeg)/pic3880340.jpg" alt="Rising Sun" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Rising Sun</div>
+          <div class="similar-rank">#154 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/vinhos-deluxe-edition/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/JuyN9UOenAG_BlO-APPpdw__original/img/_0ZWOmqFvL5UybNWgPIyioib3mQ=/0x0/filters:format(jpeg)/pic2649446.jpg" alt="Vinhos: Deluxe Edition" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Vinhos: Deluxe Edition</div>
+          <div class="similar-rank">#155 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/roll-for-the-galaxy/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/nhoyoLpYPC2b3UiJ5kJ0yg__original/img/LoETJCbq1HpSlhPLdci3qJekpwA=/0x0/filters:format(jpeg)/pic1473629.jpg" alt="Roll for the Galaxy" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Roll for the Galaxy</div>
+          <div class="similar-rank">#172 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/terraforming-mars-ares-expedition/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/eT_Atcy_vRJvuUMgYakNrQ__original/img/upZwrb6k8zZMNTwB8VfpI372yuo=/0x0/filters:format(jpeg)/pic6260098.jpg" alt="Terraforming Mars: Ares Expedition" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Terraforming Mars: Ares Expedition</div>
+          <div class="similar-rank">#192 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/aeon-039-s-end-legacy/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/quoCefZvHWeaf31_8HvFSA__original/img/y8GWcMFHQSNI754bZlDORXpjLuw=/0x0/filters:format(jpeg)/pic3979852.jpg" alt="Aeon&amp;#039;s End: Legacy" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Aeon&amp;#039;s End: Legacy</div>
+          <div class="similar-rank">#257 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/cyclades/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/6QbaJOS8acWkJ6gSYI0KaQ__original/img/KOGjizqhVHXlKWxXkuyxkHRCNnA=/0x0/filters:format(jpeg)/pic584779.jpg" alt="Cyclades" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Cyclades</div>
+          <div class="similar-rank">#272 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/combat-commander-europe/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/uKaL10FK-u9wfYyK6MQaNg__original/img/_UDsTX8nCwdsynpoVtzHJHc8h6c=/0x0/filters:format(jpeg)/pic992459.jpg" alt="Combat Commander: Europe" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Combat Commander: Europe</div>
+          <div class="similar-rank">#279 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/glory-to-rome/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/S_-n-WRvpzgH-d8xuzJgmg__original/img/cvWVDcSUBsngibbELMhABgIyrVo=/0x0/filters:format(png)/pic1079512.png" alt="Glory to Rome" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Glory to Rome</div>
+          <div class="similar-rank">#295 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/vindication/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/8kEIlWY3rg27NgmVBZkFyg__original/img/LgCwqEKxO2mpOzXf5_6z_pt6vz0=/0x0/filters:format(jpeg)/pic4101638.jpg" alt="Vindication" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Vindication</div>
+          <div class="similar-rank">#298 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/aeon-039-s-end-the-new-age/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/ZoIYlIzfph5yGuwQGKYneA__original/img/lHafKKkBdHF-LQhP1ZT7vss1qbg=/0x0/filters:format(jpeg)/pic4628176.jpg" alt="Aeon&amp;#039;s End: The New Age" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Aeon&amp;#039;s End: The New Age</div>
+          <div class="similar-rank">#304 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/kanban-driver-039-s-edition/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/rzSmS-GD8_pGl9bWo07FWQ__original/img/TFtpuGRO0cbVjWl03YhtzTBRk5A=/0x0/filters:format(jpeg)/pic5638431.jpg" alt="Kanban: Driver&amp;#039;s Edition" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Kanban: Driver&amp;#039;s Edition</div>
+          <div class="similar-rank">#315 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/shogun/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/j6UzppDoJv9tKHQl-pWpIw__original/img/Yu1D0BNyavkX_SV8EK056FxfRsw=/0x0/filters:format(jpeg)/pic3336315.jpg" alt="Shogun" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Shogun</div>
+          <div class="similar-rank">#316 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/tiny-epic-galaxies/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/c_87h8o0AOrfCO3hxMjjrA__original/img/a1VPd_zbaoq3vthJxghgsnt2AyM=/0x0/filters:format(jpeg)/pic2349732.jpg" alt="Tiny Epic Galaxies" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Tiny Epic Galaxies</div>
+          <div class="similar-rank">#394 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/san-juan/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/kiD03bslLpN_0Qe1LJ8OGg__original/img/rFYh1En1BFLZ3n0Do-BwOnn7efU=/0x0/filters:format(jpeg)/pic174174.jpg" alt="San Juan" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">San Juan</div>
+          <div class="similar-rank">#445 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/51st-state-master-set/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/oaDIooAl30NgVUWeIpC1sg__original/img/7jICcOLqm0LTdlXVUOUJloyqj2A=/0x0/filters:format(jpeg)/pic2945432.jpg" alt="51st State: Master Set" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">51st State: Master Set</div>
+          <div class="similar-rank">#488 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/libertalia-winds-of-galecrest/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/6e-V_Xb2IsAsMNXU18Fi6A__original/img/gLDo-RR_9RvU_Hrs9DnHWy_TWpk=/0x0/filters:format(jpeg)/pic6669033.jpg" alt="Libertalia: Winds of Galecrest" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Libertalia: Winds of Galecrest</div>
+          <div class="similar-rank">#515 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/san-juan-second-edition/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/Upw8067nG8AmGvOfLYs1aQ__original/img/U26iPvrcmJeEsKeCIDCXbGFqB1U=/0x0/filters:format(jpeg)/pic2305703.jpg" alt="San Juan (Second Edition)" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">San Juan (Second Edition)</div>
+          <div class="similar-rank">#522 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/tiny-towns/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/aE1EoOzr530gQin8bj8QDA__original/img/-GDAsvmQ3wkuHaZ8h9G5Gk_nvVA=/0x0/filters:format(jpeg)/pic4460401.jpg" alt="Tiny Towns" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Tiny Towns</div>
+          <div class="similar-rank">#524 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/nippon/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/DVJamHS1e24-scuM8aRH8g__original/img/SZFgBrff-aSpci1q4PsLat9Z4sI=/0x0/filters:format(jpeg)/pic2683981.jpg" alt="Nippon" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Nippon</div>
+          <div class="similar-rank">#550 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/fire-in-the-lake/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/08V8nzzLAr190Miv9GeitA__original/img/7gRe3HqaZPZPLNyKiBaq0EMbhU8=/0x0/filters:format(png)/pic2083738.png" alt="Fire in the Lake" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Fire in the Lake</div>
+          <div class="similar-rank">#558 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/moon-colony-bloodbath/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/KDrRxEKQMmHyM0QQ2ONX4Q__original/img/XD-aeaMShk-TN_n0n6O9kbczxNY=/0x0/filters:format(jpeg)/pic8638247.jpg" alt="Moon Colony Bloodbath" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Moon Colony Bloodbath</div>
+          <div class="similar-rank">#589 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/luthier/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/NNOCMpxKchQb_ByLmvDfRQ__original/img/-0mnuZeWP3DNRiw-w6G3fPfNXik=/0x0/filters:format(png)/pic8145392.png" alt="Luthier" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Luthier</div>
+          <div class="similar-rank">#590 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/libertalia/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/LeUx57CGYdnIEsnGebOB0A__original/img/ZMdpuswDvVy-I97-ws45isBIRO4=/0x0/filters:format(jpeg)/pic1326136.jpg" alt="Libertalia" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Libertalia</div>
+          <div class="similar-rank">#665 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/broom-service/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/PcxTKtTwov2vxkZZbRVDAw__original/img/kjg4hSkTE2a8MKlkZNgTGqfKqgc=/0x0/filters:format(jpeg)/pic2546156.jpg" alt="Broom Service" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Broom Service</div>
+          <div class="similar-rank">#671 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/cyclades-legendary-edition/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/g4bC44H7rdrl0KLW7LGV5A__original/img/mt9OGaBj17lmhFosEqRDybk0siI=/0x0/filters:format(png)/pic7566828.png" alt="Cyclades: Legendary Edition" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Cyclades: Legendary Edition</div>
+          <div class="similar-rank">#674 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/brian-boru-high-king-of-ireland/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/S-Ro5X2B6x2V6bana2f0fA__original/img/m09hR2xEAKWjfYuJge5vWOnqJCA=/0x0/filters:format(jpeg)/pic6149105.jpg" alt="Brian Boru: High King of Ireland" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Brian Boru: High King of Ireland</div>
+          <div class="similar-rank">#729 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/dominant-species-marine/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/UTBiMz6852dq3K_yfpgpLQ__original/img/tDNHjJ6160FjCjpY8oJuaNPQ7_k=/0x0/filters:format(jpeg)/pic5998666.jpg" alt="Dominant Species: Marine" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Dominant Species: Marine</div>
+          <div class="similar-rank">#772 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/conan/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/x0VJACjymxo4boRichVVKQ__original/img/J6IDtxBCyRLBOf_H8MH__g2xm5c=/0x0/filters:format(jpeg)/pic3118623.jpg" alt="Conan" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Conan</div>
+          <div class="similar-rank">#774 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/cuba/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/nRp3AZhQD99Ajp5-96km-w__original/img/X-skldiVnJwZi-RLu0LyFXxqHlw=/0x0/filters:format(jpeg)/pic1205385.jpg" alt="Cuba" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Cuba</div>
+          <div class="similar-rank">#858 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/arkwright/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/88UP5K3kXqFPMsFgijgx8Q__original/img/MaLzBfwKrC1919D2aQcJUVM3tik=/0x0/filters:format(jpeg)/pic9034101.jpg" alt="Arkwright" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Arkwright</div>
+          <div class="similar-rank">#870 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/new-frontiers/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/yiBNj7FQx_H_Q0JSJLwycw__original/img/NHq_4xd8NhHeSx2dGjST68ZSIgo=/0x0/filters:format(jpeg)/pic4195323.jpg" alt="New Frontiers" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">New Frontiers</div>
+          <div class="similar-rank">#892 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/eminent-domain/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/Dn3gJBq-k8Zww4a5yCzgOQ__original/img/YnPZaUDPp02cINzXYfhdJ_5f4H4=/0x0/filters:format(jpeg)/pic1160506.jpg" alt="Eminent Domain" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Eminent Domain</div>
+          <div class="similar-rank">#943 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/dice-hospital/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/V6m5SH45BlP6t7-HuGWA-w__original/img/b3B7VSa1WYqfIZhuAj1ClZM9GFg=/0x0/filters:format(jpeg)/pic3562670.jpg" alt="Dice Hospital" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Dice Hospital</div>
+          <div class="similar-rank">#959 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/wallenstein/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/WRrzW58eKeIWP1JxIiw2RQ__original/img/w_lvbrzX4mSYadLo-jnD3r-UFns=/0x0/filters:format(jpeg)/pic358092.jpg" alt="Wallenstein" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Wallenstein</div>
+          <div class="similar-rank">#972 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/jekyll-vs-hyde/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/b7ElE00K6FojMB77rDy7cg__original/img/epKMMRAsQpT-mq7w0qbPzUb1n7o=/0x0/filters:format(jpeg)/pic5316646.jpg" alt="Jekyll vs. Hyde" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Jekyll vs. Hyde</div>
+          <div class="similar-rank">#1001 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/combat-commander-pacific/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/Dc9zwXoGlT8v_HucaEOjVg__original/img/ndoJtkysvRmki4bSWnBEj4av0nM=/0x0/filters:format(jpeg)/pic6693314.jpg" alt="Combat Commander: Pacific" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Combat Commander: Pacific</div>
+          <div class="similar-rank">#1089 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/virgin-queen/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/-YgoNoqHXqA4N_4qaxUUeQ__original/img/1PSNe-YTGUbXvPO5I0BZ41laFXA=/0x0/filters:format(jpeg)/pic1276971.jpg" alt="Virgin Queen" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Virgin Queen</div>
+          <div class="similar-rank">#1172 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/innovation-ultimate/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/n3oc3G4fIsrGwqD_i0fjTA__original/img/8iZHWeIU1WdYCpLjWSUe5lBGU14=/0x0/filters:format(png)/pic8790819.png" alt="Innovation Ultimate" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Innovation Ultimate</div>
+          <div class="similar-rank">#1254 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/mottainai/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/CTOlrpzG8J6JxkCnrL_cPw__original/img/JW4j6faFmXvDA9tD0_DSJmQRYdA=/0x0/filters:format(jpeg)/pic2688214.jpg" alt="Mottainai" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Mottainai</div>
+          <div class="similar-rank">#1280 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/aeon-039-s-end-outcasts/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/TvSUxRcx_KsnJXaTJXP2Ww__original/img/Gnv3bFJf5jEl_JevuBNjIcWoLpk=/0x0/filters:format(jpeg)/pic5182494.jpg" alt="Aeon&amp;#039;s End: Outcasts" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Aeon&amp;#039;s End: Outcasts</div>
+          <div class="similar-rank">#1289 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/fields-of-green/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/U7vYrViBcFbQ1Ip6iaZ8cw__original/img/wNWd-KX6dbeVuK0ET6n51wO92pI=/0x0/filters:format(jpeg)/pic3504382.jpg" alt="Fields of Green" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Fields of Green</div>
+          <div class="similar-rank">#1297 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/dream-home/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/CtVH__gM0TBISzOzV3OeFQ__original/img/d2B_-IP89EV5g22xMzggb4yyit0=/0x0/filters:format(jpeg)/pic3176771.jpg" alt="Dream Home" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Dream Home</div>
+          <div class="similar-rank">#1318 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/a-distant-plain/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/-PI0iVHeKyFfjYST0xi9dQ__original/img/SofoqBXs6Ns_1IeqQ-XvpKkYJV4=/0x0/filters:format(jpeg)/pic1733403.jpg" alt="A Distant Plain" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">A Distant Plain</div>
+          <div class="similar-rank">#1364 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/falling-sky-the-gallic-revolt-against-caesar/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/8piEjuoZ8aOl7tXo68E-iw__original/img/gjEnSRLlI4nSiLaT55s0KMDaqmQ=/0x0/filters:format(jpeg)/pic2963551.jpg" alt="Falling Sky: The Gallic Revolt Against Caesar" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Falling Sky: The Gallic Revolt Against Caesar</div>
+          <div class="similar-rank">#1371 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/polis-fight-for-the-hegemony/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/9O_e79sEzNqpd6R-442d-w__original/img/Ea37T1CWiOjPx5Vv5e-4m90DP84=/0x0/filters:format(jpeg)/pic1032795.jpg" alt="Polis: Fight for the Hegemony" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Polis: Fight for the Hegemony</div>
+          <div class="similar-rank">#1374 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/andean-abyss/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/MB8ou4M0PrsBAxADi4EAXQ__original/img/yzWulDyc8Gv7Bort8AWe1o5XusE=/0x0/filters:format(jpeg)/pic1381149.jpg" alt="Andean Abyss" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Andean Abyss</div>
+          <div class="similar-rank">#1402 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/batman-gotham-city-chronicles/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/YGNk9UF-QqLWT58aWiRV7w__original/img/KdB7vv0-cUujU4-eE3udGR1xYKA=/0x0/filters:format(png)/pic3893551.png" alt="Batman: Gotham City Chronicles" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Batman: Gotham City Chronicles</div>
+          <div class="similar-rank">#1408 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/liberty-or-death-the-american-insurrection/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/9m47Um3r-WhRwgGa-Xqe8A__original/img/2mLvwv6VXr9ZKHrYtulF-8KGEPE=/0x0/filters:format(png)/pic2729630.png" alt="Liberty or Death: The American Insurrection" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Liberty or Death: The American Insurrection</div>
+          <div class="similar-rank">#1526 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/kitchen-rush-revised-edition/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/kE0C-vBrqQ1w4j_P2sqb8g__original/img/xYNIHY_mPzSnh_uXr1Oyg9bfNpI=/0x0/filters:format(jpeg)/pic4906385.jpg" alt="Kitchen Rush (Revised Edition)" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Kitchen Rush (Revised Edition)</div>
+          <div class="similar-rank">#1532 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/coloma/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/sIu72fGpJL5qGhdiXyTCVw__original/img/ralnhtnY5YXKHQOBpYsqsbhwbec=/0x0/filters:format(png)/pic4418609.png" alt="Coloma" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Coloma</div>
+          <div class="similar-rank">#1559 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/last-light/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/zw7xI7gJD6r7zNDR-AbVAQ__original/img/1Lst1UcQo1PyWL-19IKxiWz94Yk=/0x0/filters:format(jpeg)/pic6338617.jpg" alt="Last Light" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Last Light</div>
+          <div class="similar-rank">#1584 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/dead-cells-the-rogue-lite-board-game/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/N_5Dz0GeI5dGBzSrBMEqrg__original/img/ppMMkd1w8h-m7OfsRRL3VXQ9lKI=/0x0/filters:format(jpeg)/pic7336034.jpg" alt="Dead Cells: The Rogue-Lite Board Game" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Dead Cells: The Rogue-Lite Board Game</div>
+          <div class="similar-rank">#1609 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/astro-knights/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/jVHj2mDZsjXfEZtT50kSQg__original/img/BZNN6uXkiQiFl0AYUARb2JN7umA=/0x0/filters:format(jpeg)/pic6555779.jpg" alt="Astro Knights" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Astro Knights</div>
+          <div class="similar-rank">#1659 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/smash-up-it-039-s-your-fault/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/9oxsjNlu9BL54x6Vtvkzsg__original/img/j44A-9eewv6bANSbHB2Fyr-AYVs=/0x0/filters:format(jpeg)/pic2843367.jpg" alt="Smash Up: It&amp;#039;s Your Fault!" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Smash Up: It&amp;#039;s Your Fault!</div>
+          <div class="similar-rank">#1664 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/v-sabotage/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/1xZb072U9XSPTtVX6U-y1g__original/img/3GMpUUzZDL3C1WfhtqpF0-JQVuo=/0x0/filters:format(jpeg)/pic6569827.jpg" alt="V-Sabotage" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">V-Sabotage</div>
+          <div class="similar-rank">#1683 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/bot-factory/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/3AxdPt4zBDXqtrcsZx5Y9A__original/img/BL8RgyXTqZh24MRSN0acUvWMZvc=/0x0/filters:format(jpeg)/pic6514058.jpg" alt="Bot Factory" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Bot Factory</div>
+          <div class="similar-rank">#1752 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/rum-bones-second-tide/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/IiZsfcuK9NrVwRBqvLyO0A__original/img/VzTm4d6ckh7xLvqsZ5C-s789Ve4=/0x0/filters:format(jpeg)/pic2945727.jpg" alt="Rum &amp; Bones: Second Tide" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Rum &amp; Bones: Second Tide</div>
+          <div class="similar-rank">#1839 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/warhammer-quest-blackstone-fortress/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/Xbh57Hkq-S8b2J3cECUoPA__original/img/LCxf53dt4NbfzmAxGkdZDO9NcFE=/0x0/filters:format(jpeg)/pic6875960.jpg" alt="Warhammer Quest: Blackstone Fortress" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Warhammer Quest: Blackstone Fortress</div>
+          <div class="similar-rank">#1962 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/wallenstein-second-edition/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/fntuB839u6K9d51noAE7Jw__original/img/f9GjvhKZ5MhLscPzbLA-Lp5fGWo=/0x0/filters:format(jpeg)/pic1102879.jpg" alt="Wallenstein (Second Edition)" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Wallenstein (Second Edition)</div>
+          <div class="similar-rank">#1974 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/tiny-epic-kingdoms/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/rEBwFqk9b4rT-hrGOQnZrA__original/img/N-czadI8K2PdDuvOw7Vy50R7qls=/0x0/filters:format(jpeg)/pic2947892.jpg" alt="Tiny Epic Kingdoms" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Tiny Epic Kingdoms</div>
+          <div class="similar-rank">#1990 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/colonial-twilight-the-french-algerian-war-1954-62/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/v_HY6Mow4RK6n8aQVBGsAw__original/img/4TP_T4UpssVyOR7ntci12fmAAXo=/0x0/filters:format(jpeg)/pic3466068.jpg" alt="Colonial Twilight: The French-Algerian War, 1954-62" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Colonial Twilight: The French-Algerian War, 1954-62</div>
+          <div class="similar-rank">#2195 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/gandhi-the-decolonization-of-british-india-1917-1947/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/hl-fcBj8n6Gid_N_vA7UcA__original/img/M-9GnqXsAi2Kpah7gqbvQxKB904=/0x0/filters:format(jpeg)/pic4545781.jpg" alt="Gandhi: The Decolonization of British India, 1917 – 1947" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Gandhi: The Decolonization of British India, 1917 – 1947</div>
+          <div class="similar-rank">#2813 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/downfall-conquest-of-the-third-reich-1942-1945/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/8NXSFG7pqu9L79gGOyimYA__original/img/7LJkace6dEXzOjbEs2req-bCn7c=/0x0/filters:format(jpeg)/pic7472098.jpg" alt="Downfall: Conquest of the Third Reich, 1942-1945" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Downfall: Conquest of the Third Reich, 1942-1945</div>
+          <div class="similar-rank">#4589 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/air-war-korea-air-combat-rules-for-1-600-1-300-1-144th-miniatures-for-the-korean-war-1950-1953/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/AWwH2f4hvxWkkZ23GaMuvg__original/img/uA9yYyBmHCRasuycAxHnryk4Ji0=/0x0/filters:format(png)/pic5153692.png" alt="Air War-Korea: Air Combat Rules for 1/600, 1/300, 1/144th Miniatures for the Korean War 1950-1953" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Air War-Korea: Air Combat Rules for 1/600, 1/300, 1/144th Miniatures for the Korean War 1950-1953</div>
+          <div class="similar-rank">#0 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/old-world-new-world/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/dPSwI1gK-RYI5Rxb-2oP1g__original/img/lK42ynVv1wryrT8janpVLddEe3E=/0x0/filters:format(jpeg)/pic207148.jpg" alt="Old World, New World" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Old World, New World</div>
+          <div class="similar-rank">#0 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/conquest-the-card-game/" class="similar-card">
+        <div style="aspect-ratio:1;background:#f8f8f8"></div>
+        <div class="similar-card-body">
+          <div class="similar-name">Conquest, the card game</div>
+          <div class="similar-rank">#0 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/white-october-the-last-assault-on-red-petrograd-october-1919/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/-KqeJAI7K_Ho9s5Al4dtyQ__original/img/flBsgrobjQD-CL0fIt7Amtk-xJU=/0x0/filters:format(jpeg)/pic852059.jpg" alt="White October: The Last Assault on Red Petrograd, October 1919" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">White October: The Last Assault on Red Petrograd, October 1919</div>
+          <div class="similar-rank">#0 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/guspira-el-joc-dels-correfocs/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/fxYYcs7u7JrVMya8KmEoSg__original/img/zhTiJ1UM6qDlcCIF4BOnysKkR2w=/0x0/filters:format(jpeg)/pic2368309.jpg" alt="Guspira, el joc dels correfocs" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Guspira, el joc dels correfocs</div>
+          <div class="similar-rank">#0 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/juggernauts-panzerkeil-vs-artkor-kursk-1943/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/xBPqgnYIx5HzrUEhyx_5oQ__original/img/XEJyo98K_pKGBs7Csmv1xar7-Tg=/0x0/filters:format(png)/pic5513362.png" alt="Juggernauts:  Panzerkeil vs. ArtKor, Kursk 1943" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Juggernauts:  Panzerkeil vs. ArtKor, Kursk 1943</div>
+          <div class="similar-rank">#0 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/moscow-assailed-1941/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/RGs7Ck3fk8GdBkTW86G0sA__original/img/xNQzzfHmkI_t8_kYoOqNtm9EDI8=/0x0/filters:format(png)/pic4454079.png" alt="Moscow Assailed, 1941" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Moscow Assailed, 1941</div>
+          <div class="similar-rank">#0 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/sharp-practice-wargame-rules-for-large-skirmishes-in-the-era-of-black-powder-1700-to-1865/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/vPr80nSgnHubs6mrjxXagg__original/img/dLbCAGISxbMOiNdDFRysN33AYjs=/0x0/filters:format(jpeg)/pic3031851.jpg" alt="Sharp Practice: Wargame Rules for Large Skirmishes in the Era of Black Powder, 1700 to 1865" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Sharp Practice: Wargame Rules for Large Skirmishes in the Era of Black Powder, 1700 to 1865</div>
+          <div class="similar-rank">#10202 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/i-ain-039-t-been-shot-mum/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/AZ10uM4da-i5Iij9RkYl6Q__original/img/OY4TlIPyfGYKt8rNLzHrkieszz0=/0x0/filters:format(jpeg)/pic1129138.jpg" alt="I Ain&amp;#039;t Been Shot, Mum" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">I Ain&amp;#039;t Been Shot, Mum</div>
+          <div class="similar-rank">#11586 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/drive-on-moscow-operation-typhoon-1941/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/LemldgLbscku8qCc7CiInw__original/img/prE_aDGxJBCUSl1ktDXw2qRv7G0=/0x0/filters:format(jpeg)/pic3974839.jpg" alt="Drive on Moscow: Operation Typhoon, 1941" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Drive on Moscow: Operation Typhoon, 1941</div>
+          <div class="similar-rank">#15023 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/barbarossa-the-russo-german-war-1941-45/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/VyJDEx7fS3DEBiwzZB0wKQ__original/img/d9h1w1BlHgOxz_zHOyoVPf1B8rU=/0x0/filters:format(jpeg)/pic7463594.jpg" alt="Barbarossa: The Russo-German War, 1941-45" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Barbarossa: The Russo-German War, 1941-45</div>
+          <div class="similar-rank">#15608 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/dark-millennium-the-warhammer-40-000-collectible-card-game/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/6ai3qnFm6kpVW_ddhYLpwg__original/img/6liuEQqSqYQy8yrbDEFfEoXevG8=/0x0/filters:format(jpeg)/pic114350.jpg" alt="Dark Millennium: The Warhammer 40,000 Collectible Card Game" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Dark Millennium: The Warhammer 40,000 Collectible Card Game</div>
+          <div class="similar-rank">#20907 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/flintlock-black-powder-cold-steel-volume-i-carolina-rebels/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/qjIc1E7kH8YDZRlj82CmmA__original/img/2Dzpvu0hD2_vX4hp_EF3zhs3nmc=/0x0/filters:format(jpeg)/pic320701.jpg" alt="Flintlock: Black Powder, Cold Steel -  Volume I: Carolina Rebels" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Flintlock: Black Powder, Cold Steel -  Volume I: Carolina Rebels</div>
+          <div class="similar-rank">#21313 BGG</div>
+        </div>
+      </a>
+      <a href="/giochi/flip-switch-and-roll/" class="similar-card">
+        <img src="https://cf.geekdo-images.com/nEud5buf6EqvsgcdiI1BGA__original/img/equZqIoWwNHnkxhctFZui_afcO8=/0x0/filters:format(png)/pic6995422.png" alt="Flip, Switch and Roll" loading="lazy" />
+        <div class="similar-card-body">
+          <div class="similar-name">Flip, Switch and Roll</div>
+          <div class="similar-rank">#26892 BGG</div>
+        </div>
+      </a>
+    </div>
+  </div></main>
+  <footer>
+    <p>© 2026 CompraeGioca — Comparatore prezzi giochi da tavolo</p>
+    <nav class="footer-nav">
+      <a href="/faq">FAQ</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/termini">Termini</a>
+      <button class="footer-link-btn" onclick="openCookieSettings()">Cookie</button>
+    </nav>
+  </footer>
+
+  <div id="cookie-banner" style="display:none">
+    <p>Questo sito usa Google Analytics per capire come viene utilizzato. Accetti i cookie analitici?</p>
+    <div class="cookie-actions">
+      <button id="cookie-accept">Accetta</button>
+      <button id="cookie-decline">Rifiuta</button>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var banner = document.getElementById('cookie-banner');
+
+      function bindBannerButtons() {
+        document.getElementById('cookie-accept').onclick = function() {
+          localStorage.setItem('ga_consent', 'yes');
+          banner.style.display = 'none';
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+        };
+        document.getElementById('cookie-decline').onclick = function() {
+          localStorage.setItem('ga_consent', 'no');
+          banner.style.display = 'none';
+        };
+      }
+
+      window.openCookieSettings = function() {
+        localStorage.removeItem('ga_consent');
+        banner.style.display = 'flex';
+        bindBannerButtons();
+      };
+
+      var consent = localStorage.getItem('ga_consent');
+      if (consent === 'yes') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      } else if (!consent) {
+        banner.style.display = 'flex';
+        bindBannerButtons();
+      }
+    })();
+  </script>
+</body>
+</html>

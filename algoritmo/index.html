@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algoritmo | CompraeGioca</title>
+  <meta name="description" content="Confronta i prezzi dei giochi da tavolo nei migliori negozi italiani." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:title" content="Algoritmo | CompraeGioca" />
+  <meta property="og:description" content="Confronta i prezzi dei giochi da tavolo nei migliori negozi italiani." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CompraeGioca" />
+  <link rel="shortcut icon" type="image/png" href="/favicon/favicon-16x16" />
+  <link href="/favicon/apple-logo-57x57.png" rel="apple-touch-icon" />
+  <link href="/favicon/apple-logo-60x60.png" rel="apple-touch-icon" sizes="60x60" />
+  <link href="/favicon/apple-logo-72x72.png" rel="apple-touch-icon" sizes="72x72" />
+  <link href="/favicon/apple-logo-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+  <link href="/favicon/apple-logo-114x114.png" rel="apple-touch-icon" sizes="114x114" />
+  <link href="/favicon/apple-logo-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+  <link href="/favicon/apple-logo-144x144.png" rel="apple-touch-icon" sizes="144x144" />
+  <link href="/favicon/apple-logo-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+  <link href="/favicon/apple-logo-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="/favicon/android-logo-128x128.png" rel="icon" sizes="128x128" />
+  <link href="/favicon/android-logo-192x192.png" rel="icon" sizes="192x192" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#EBC01C" />
+  <link rel="stylesheet" href="/assets/style.css?v=mtldjs5a" />
+  <script>
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied', wait_for_update: 500 });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLJSKG3SWM"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-LLJSKG3SWM');
+  </script>
+</head>
+<body>
+  <div class="header-accent"></div>
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo-link">
+        <img src="/logo.png" alt="CompraeGioca" class="logo-img" />
+      </a>
+      <nav class="header-nav">
+        <a href="/come-funziona">Come funziona</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+  <div class="come-funziona">
+    <div class="come-funziona-header">
+      <h1>Come funziona l'algoritmo</h1>
+      <p>Documentazione interna del sistema di classificazione dei risultati di ricerca.</p>
+    </div>
+
+    <section class="algo-section">
+      <h2>Panoramica</h2>
+      <p>Quando un utente cerca un gioco, i risultati provenienti dai vari negozi vengono classificati in tre bucket:</p>
+      <ul>
+        <li><strong>relevant</strong> — prodotti pertinenti alla ricerca, mostrati in cima</li>
+        <li><strong>secondary</strong> — espansioni, accessori, bundle: mostrati nella sezione "accessori ed espansioni" (collassata)</li>
+        <li><strong>excluded</strong> — risultati irrilevanti (prezzo &lt; 5€, lego, puzzle, o nessun match con la query): nascosti di default</li>
+      </ul>
+      <p>La classificazione è un unico passaggio diretto, basato solo su due blacklist lessicali.</p>
+    </section>
+
+    <section class="algo-section">
+      <h2>Classificazione</h2>
+      <p>Ogni risultato viene classificato individualmente:</p>
+      <ol>
+        <li>Se <code>prezzo &lt; 5€</code>, o il nome contiene una parola della <strong>blacklist esclusi</strong>, o nessun token della query appare nel nome → <strong>excluded</strong></li>
+        <li>Se il nome contiene una parola della <strong>blacklist espansioni</strong> → <strong>secondary</strong></li>
+        <li>Altrimenti → <strong>relevant</strong></li>
+      </ol>
+      <p>Il match query usa <em>word boundary</em>: tutti i token della query devono comparire nel nome (ordine libero, non necessariamente adiacenti).</p>
+
+      <h3>Blacklist espansioni (SECONDARY_RE)</h3>
+      <p>Parole che identificano espansioni o accessori:</p>
+      <p class="algo-code">sleeve, sleeves, bustina/e, proteggi, protezioni, insert, inserto, organizer, organizzatore, playmat, tappetino, tappeto, accessorio/i, ricambio/i, portacarte, porta carte, dado, dadi, espansione/i, expansion/s, promo, promozione, booster, automa, moneta, monete, goodies</p>
+      <h3>Blacklist esclusi (EXCLUDED_RE)</h3>
+      <p>Prodotti completamente irrilevanti, nascosti di default (non compaiono nemmeno nella sezione espansioni):</p>
+      <p class="algo-code">lego, puzzle, portachiavi, pendolo, collana, culla, borsa, sacca, francobolli, plancia, map pack, dice set, super string, prophila, souvenir</p>
+    </section>
+
+    <section class="algo-section">
+      <h2>Debug mode</h2>
+      <p>Attivabile con <code>?debug=1</code> (cookie 24h). Disattiva con <code>?debug=0</code>.</p>
+      <p>In debug mode ogni risultato mostra un badge con il motivo della classificazione:</p>
+      <ul>
+        <li><code>secondary · 🚫 "espansione"</code> — parola blacklistata (SECONDARY_RE)</li>
+        <li><code>relevant</code> / <code>excluded</code> — nessuna parola blacklistata trovata</li>
+      </ul>
+    </section>
+
+    <section class="algo-section">
+      <h2>Limitazioni note</h2>
+      <ul>
+        <li>Se un'espansione è venduta <em>senza</em> nessuna delle parole della blacklist espansioni nel nome (naming sciatto del negozio), resta classificata <strong>relevant</strong> insieme al gioco base.</li>
+        <li>L'unica correzione possibile per un caso del genere è aggiungere la parola mancante a <code>SECONDARY_RE</code> (o <code>EXCLUDED_RE</code> se il prodotto è del tutto estraneo).</li>
+      </ul>
+      <p>Nota storica: fino ad agosto 2026 esisteva anche una logica di <em>subset demotion</em> ed <em>expansion tokens</em> che inferiva la classificazione dal confronto tra i token dei nomi dei prodotti. È stata rimossa perché troppo aggressiva su titoli brevi: bastava un solo token condiviso con un item secondary per far retrocedere anche il prodotto giusto (es. il gioco base scartato perché "sottoinsieme" di un suo promo pack).</p>
+    </section>
+  </div></main>
+  <footer>
+    <p>© 2026 CompraeGioca — Comparatore prezzi giochi da tavolo</p>
+    <nav class="footer-nav">
+      <a href="/faq">FAQ</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/termini">Termini</a>
+      <button class="footer-link-btn" onclick="openCookieSettings()">Cookie</button>
+    </nav>
+  </footer>
+
+  <div id="cookie-banner" style="display:none">
+    <p>Questo sito usa Google Analytics per capire come viene utilizzato. Accetti i cookie analitici?</p>
+    <div class="cookie-actions">
+      <button id="cookie-accept">Accetta</button>
+      <button id="cookie-decline">Rifiuta</button>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var banner = document.getElementById('cookie-banner');
+
+      function bindBannerButtons() {
+        document.getElementById('cookie-accept').onclick = function() {
+          localStorage.setItem('ga_consent', 'yes');
+          banner.style.display = 'none';
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+        };
+        document.getElementById('cookie-decline').onclick = function() {
+          localStorage.setItem('ga_consent', 'no');
+          banner.style.display = 'none';
+        };
+      }
+
+      window.openCookieSettings = function() {
+        localStorage.removeItem('ga_consent');
+        banner.style.display = 'flex';
+        bindBannerButtons();
+      };
+
+      var consent = localStorage.getItem('ga_consent');
+      if (consent === 'yes') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      } else if (!consent) {
+        banner.style.display = 'flex';
+        bindBannerButtons();
+      }
+    })();
+  </script>
+</body>
+</html>

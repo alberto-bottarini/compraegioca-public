@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cerca giochi da tavolo | CompraeGioca</title>
+  <meta name="description" content="Confronta i prezzi dei giochi da tavolo nei migliori negozi italiani." />
+  <meta property="og:title" content="Cerca giochi da tavolo | CompraeGioca" />
+  <meta property="og:description" content="Confronta i prezzi dei giochi da tavolo nei migliori negozi italiani." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CompraeGioca" />
+  <link rel="shortcut icon" type="image/png" href="/favicon/favicon-16x16" />
+  <link href="/favicon/apple-logo-57x57.png" rel="apple-touch-icon" />
+  <link href="/favicon/apple-logo-60x60.png" rel="apple-touch-icon" sizes="60x60" />
+  <link href="/favicon/apple-logo-72x72.png" rel="apple-touch-icon" sizes="72x72" />
+  <link href="/favicon/apple-logo-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+  <link href="/favicon/apple-logo-114x114.png" rel="apple-touch-icon" sizes="114x114" />
+  <link href="/favicon/apple-logo-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+  <link href="/favicon/apple-logo-144x144.png" rel="apple-touch-icon" sizes="144x144" />
+  <link href="/favicon/apple-logo-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+  <link href="/favicon/apple-logo-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="/favicon/android-logo-128x128.png" rel="icon" sizes="128x128" />
+  <link href="/favicon/android-logo-192x192.png" rel="icon" sizes="192x192" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#EBC01C" />
+  <link rel="stylesheet" href="/assets/style.css?v=mtldjs5a" />
+  <script>
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied', wait_for_update: 500 });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLJSKG3SWM"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-LLJSKG3SWM');
+  </script>
+</head>
+<body>
+  <div class="header-accent"></div>
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo-link">
+        <img src="/logo.png" alt="CompraeGioca" class="logo-img" />
+      </a>
+      <nav class="header-nav">
+        <a href="/come-funziona">Come funziona</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+  <div class="search-section">
+    <div class="search-section-inner">
+      <form id="searchForm">
+        <div class="search-box">
+          <div class="search-input-wrap">
+            <input
+              type="text"
+              id="q"
+              placeholder="Cerca un gioco... es. Catan, Pandemic, Azul"
+              autocomplete="off"
+              autocapitalize="off"
+              required
+            />
+            <button type="button" id="searchClear" class="search-clear" aria-label="Cancella">✕</button>
+          </div>
+          <button type="submit" class="btn-primary">Cerca</button>
+        </div>
+      </form>
+      <div id="searchProgress" class="search-progress" style="display:none"><div></div></div>
+    </div>
+  </div>
+
+  <div class="results-section">
+    <button id="filterToggle" class="filter-toggle" style="display:none" aria-label="Apri filtri">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+      Filtri
+    </button>
+
+    <div class="results-layout">
+      <aside id="filters" class="filters-panel" style="display:none" aria-label="Filtri">
+        <div class="filters-inner">
+          <div class="filters-head">
+            <span class="filters-title">Filtri</span>
+            <button id="filterClose" class="filter-close-btn" aria-label="Chiudi filtri">✕</button>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label">Prezzo prodotto</span>
+            <div class="price-row">
+              <span class="price-bound-label">Da</span>
+              <input type="range" id="filterMin" min="0" max="200" value="0" step="1" />
+              <span class="price-val" id="minVal">0 €</span>
+            </div>
+            <div class="price-row">
+              <span class="price-bound-label">A</span>
+              <input type="range" id="filterMax" min="0" max="200" value="200" step="1" />
+              <span class="price-val" id="maxVal">200 €</span>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label">Negozio</span>
+            <div id="shopChecks"></div>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label">Offerta</span>
+            <label class="checkbox-label">
+              <input type="checkbox" id="filterOnSale" />
+              Solo prodotti in offerta
+            </label>
+          </div>
+
+        </div>
+      </aside>
+
+      <div id="filterBackdrop" class="filter-backdrop"></div>
+
+      <div class="results-main">
+        <div class="results-topbar">
+          <div id="resultCount" class="result-count" style="display:none"></div>
+          <button id="sortInfoBtn" class="sort-info-btn" style="display:none" aria-label="Come funziona l'ordinamento">
+            Come ordiniamo i risultati
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </button>
+        </div>
+
+        <div id="sortInfoModal" class="modal-overlay" style="display:none" role="dialog" aria-modal="true">
+          <div class="modal-box">
+            <button class="modal-close" id="sortInfoClose" aria-label="Chiudi">✕</button>
+            <h2 class="modal-title">Come ordiniamo i risultati</h2>
+            <p>Calcoliamo quanto ogni risultato è <strong>pertinente alla tua ricerca</strong> analizzando il nome del prodotto.</p>
+            <p>I prodotti molto aderenti alla keyword compaiono in cima; quelli poco pertinenti vengono nascosti di default — puoi mostrarli con il link in fondo alla lista.</p>
+            <p>Espansioni e accessori pertinenti compaiono in una sezione separata sotto i risultati principali.</p>
+            <p>A parità di pertinenza, sale in classifica chi ha il <strong>prezzo più basso</strong>.</p>
+          </div>
+        </div>
+
+        <div id="loading" class="loading" style="display:none">
+          <div class="spinner"></div>
+          <p>Sto cercando i prezzi migliori...</p>
+        </div>
+        <div id="errorMsg" class="error-msg" style="display:none"></div>
+        <div id="resultsList" class="results-list"></div>
+        <div id="expansionSection" style="display:none">
+          <button id="expansionToggle" class="expansion-toggle">
+            <span id="expansionLabel"></span>
+            <svg id="expansionChevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="transition:transform .2s"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="expansionList" class="results-list" style="display:none;margin-top:10px"></div>
+        </div>
+        <div id="excludedList" class="results-list"></div>
+        <div id="excludedBanner" class="excluded-banner" style="display:none">
+          <span id="excludedCount"></span>
+          <button id="showExcludedBtn" class="btn-show-excluded">Mostrali</button>
+        </div>
+        <div id="noResults" class="no-results" style="display:none">
+          Nessun risultato trovato per questa ricerca.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API_URL = "https://api.compraegioca.com/api/search";
+    const CLICK_URL = "https://api.compraegioca.com/api/click";
+    const _kf1 = "Y29tcHJhZQ==";
+    const _kf2 = "==QO5E2Yvl2Z";
+    function clientKey() {
+      return atob(_kf1) + atob(_kf2.split('').reverse().join(''));
+    }
+    const CACHE_KEY = 'cg_cache';
+    const CACHE_TTL_MS = 5 * 60 * 1000;
+    const RECENT_KEY = 'cg_recent';
+    const RECENT_MAX = 10;
+  </script>
+  <script src="/assets/cerca.js?v=mtldjs5a"></script></main>
+  <footer>
+    <p>© 2026 CompraeGioca — Comparatore prezzi giochi da tavolo</p>
+    <nav class="footer-nav">
+      <a href="/faq">FAQ</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/termini">Termini</a>
+      <button class="footer-link-btn" onclick="openCookieSettings()">Cookie</button>
+    </nav>
+  </footer>
+
+  <div id="cookie-banner" style="display:none">
+    <p>Questo sito usa Google Analytics per capire come viene utilizzato. Accetti i cookie analitici?</p>
+    <div class="cookie-actions">
+      <button id="cookie-accept">Accetta</button>
+      <button id="cookie-decline">Rifiuta</button>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var banner = document.getElementById('cookie-banner');
+
+      function bindBannerButtons() {
+        document.getElementById('cookie-accept').onclick = function() {
+          localStorage.setItem('ga_consent', 'yes');
+          banner.style.display = 'none';
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+        };
+        document.getElementById('cookie-decline').onclick = function() {
+          localStorage.setItem('ga_consent', 'no');
+          banner.style.display = 'none';
+        };
+      }
+
+      window.openCookieSettings = function() {
+        localStorage.removeItem('ga_consent');
+        banner.style.display = 'flex';
+        bindBannerButtons();
+      };
+
+      var consent = localStorage.getItem('ga_consent');
+      if (consent === 'yes') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      } else if (!consent) {
+        banner.style.display = 'flex';
+        bindBannerButtons();
+      }
+    })();
+  </script>
+</body>
+</html>

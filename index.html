@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CompraeGioca — Confronta i prezzi dei giochi da tavolo</title>
+  <meta name="description" content="Confronta i prezzi dei giochi da tavolo nei migliori negozi italiani." />
+  <meta property="og:title" content="CompraeGioca — Confronta i prezzi dei giochi da tavolo" />
+  <meta property="og:description" content="Confronta i prezzi dei giochi da tavolo nei migliori negozi italiani." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CompraeGioca" />
+  <link rel="shortcut icon" type="image/png" href="/favicon/favicon-16x16" />
+  <link href="/favicon/apple-logo-57x57.png" rel="apple-touch-icon" />
+  <link href="/favicon/apple-logo-60x60.png" rel="apple-touch-icon" sizes="60x60" />
+  <link href="/favicon/apple-logo-72x72.png" rel="apple-touch-icon" sizes="72x72" />
+  <link href="/favicon/apple-logo-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+  <link href="/favicon/apple-logo-114x114.png" rel="apple-touch-icon" sizes="114x114" />
+  <link href="/favicon/apple-logo-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+  <link href="/favicon/apple-logo-144x144.png" rel="apple-touch-icon" sizes="144x144" />
+  <link href="/favicon/apple-logo-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+  <link href="/favicon/apple-logo-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="/favicon/android-logo-128x128.png" rel="icon" sizes="128x128" />
+  <link href="/favicon/android-logo-192x192.png" rel="icon" sizes="192x192" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#EBC01C" />
+  <link rel="stylesheet" href="/assets/style.css?v=mtldjs5a" />
+  <script>
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied', wait_for_update: 500 });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLJSKG3SWM"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-LLJSKG3SWM');
+  </script>
+</head>
+<body>
+  <div class="header-accent"></div>
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo-link">
+        <img src="/logo.png" alt="CompraeGioca" class="logo-img" />
+      </a>
+      <nav class="header-nav">
+        <a href="/come-funziona">Come funziona</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+  <section class="hero">
+    <h1>Trova il gioco al prezzo migliore</h1>
+    <p>Confrontiamo i prezzi dei migliori negozi italiani di giochi da tavolo, spedizione inclusa.</p>
+    <form action="/cerca" method="get">
+      <div class="search-box">
+        <div class="search-input-wrap">
+          <input
+            type="text"
+            name="q"
+            placeholder="Cerca un gioco... es. Catan, Pandemic, Azul"
+            autocomplete="off"
+            autocapitalize="off"
+            required
+            oninput="var x=this.nextElementSibling;x.style.display=this.value?'flex':'none';"
+          />
+          <button type="button" class="search-clear" aria-label="Cancella" onclick="this.previousElementSibling.value='';this.style.display='none';this.previousElementSibling.focus();">✕</button>
+        </div>
+        <button type="submit" class="btn-primary">Cerca</button>
+      </div>
+    </form>
+    <div id="recentSearches" class="recent-searches" style="display:none">
+      <span class="recent-label">Ultime ricerche:</span>
+      <div id="recentTags" class="recent-tags"></div>
+    </div>
+    <p class="shops-badge">Cerchiamo su <strong>17 negozi</strong> italiani di giochi da tavolo</p>
+  </section>
+  <script>
+  (function() {
+    try {
+      var recent = JSON.parse(localStorage.getItem('cg_recent') || '[]');
+      if (!Array.isArray(recent) || recent.length === 0) return;
+      var container = document.getElementById('recentSearches');
+      var tags = document.getElementById('recentTags');
+      tags.innerHTML = recent.map(function(q) {
+        return '<a href="/cerca?q=' + encodeURIComponent(q) + '" class="recent-tag">'
+          + q.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+          + '</a>';
+      }).join('');
+      container.style.display = 'flex';
+    } catch(e) {}
+  })();
+  </script>
+
+  
+  <div class="home-sections">
+    <section class="home-section">
+      <h2 class="home-section-title">I giochi più votati</h2>
+      <p class="home-section-sub">La classifica dei migliori giochi da tavolo secondo BoardGameGeek.</p>
+      <div class="similar-grid">
+        
+        <a href="/giochi/brass-birmingham/" class="similar-card">
+          <img src="https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__original/img/FpyxH41Y6_ROoePAilPNEhXnzO8=/0x0/filters:format(jpeg)/pic3490053.jpg" alt="Brass: Birmingham" loading="lazy" />
+          <div class="similar-card-body">
+            <div class="similar-name">Brass: Birmingham</div>
+            <div class="similar-rank">#1 BGG</div>
+          </div>
+        </a>
+        <a href="/giochi/ark-nova/" class="similar-card">
+          <img src="https://cf.geekdo-images.com/SoU8p28Sk1s8MSvoM4N8pQ__original/img/g4S18szTdrXCdIwVKzMKrZrYAcM=/0x0/filters:format(jpeg)/pic6293412.jpg" alt="Ark Nova" loading="lazy" />
+          <div class="similar-card-body">
+            <div class="similar-name">Ark Nova</div>
+            <div class="similar-rank">#2 BGG</div>
+          </div>
+        </a>
+        <a href="/giochi/pandemic-legacy-season-1/" class="similar-card">
+          <img src="https://cf.geekdo-images.com/-Qer2BBPG7qGGDu6KcVDIw__original/img/PlzAH7swN1nsFxOXbfUvE3TkE5w=/0x0/filters:format(png)/pic2452831.png" alt="Pandemic Legacy: Season 1" loading="lazy" />
+          <div class="similar-card-body">
+            <div class="similar-name">Pandemic Legacy: Season 1</div>
+            <div class="similar-rank">#3 BGG</div>
+          </div>
+        </a>
+        <a href="/giochi/gloomhaven/" class="similar-card">
+          <img src="https://cf.geekdo-images.com/sZYp_3BTDGjh2unaZfZmuA__original/img/7d-lj5Gd1e8PFnD97LYFah2c45M=/0x0/filters:format(jpeg)/pic2437871.jpg" alt="Gloomhaven" loading="lazy" />
+          <div class="similar-card-body">
+            <div class="similar-name">Gloomhaven</div>
+            <div class="similar-rank">#4 BGG</div>
+          </div>
+        </a>
+        <a href="/giochi/dune-imperium-uprising/" class="similar-card">
+          <img src="https://cf.geekdo-images.com/UVUkjMV_Q2paVUIUP30Vvw__original/img/BoUtCkd1NRO0bR1R5EwL51xIuXA=/0x0/filters:format(jpeg)/pic7664424.jpg" alt="Dune: Imperium – Uprising" loading="lazy" />
+          <div class="similar-card-body">
+            <div class="similar-name">Dune: Imperium – Uprising</div>
+            <div class="similar-rank">#5 BGG</div>
+          </div>
+        </a>
+        <a href="/giochi/dune-imperium/" class="similar-card">
+          <img src="https://cf.geekdo-images.com/PhjygpWSo-0labGrPBMyyg__original/img/mZzaBAEEJpMlHWWmC0R6Su0OibQ=/0x0/filters:format(jpeg)/pic5666597.jpg" alt="Dune: Imperium" loading="lazy" />
+          <div class="similar-card-body">
+            <div class="similar-name">Dune: Imperium</div>
+            <div class="similar-rank">#6 BGG</div>
+          </div>
+        </a>
+        <a href="/giochi/twilight-imperium-fourth-edition/" class="similar-card">
+          <img src="https://cf.geekdo-images.com/_Ppn5lssO5OaildSE-FgFA__original/img/kVpZ0Maa_LeQGWxOqsYKP3N4KUY=/0x0/filters:format(jpeg)/pic3727516.jpg" alt="Twilight Imperium: Fourth Edition" loading="lazy" />
+          <div class="similar-card-body">
+            <div class="similar-name">Twilight Imperium: Fourth Edition</div>
+            <div class="similar-rank">#7 BGG</div>
+          </div>
+        </a>
+        <a href="/giochi/war-of-the-ring-second-edition/" class="similar-card">
+          <img src="https://cf.geekdo-images.com/ImPgGag98W6gpV1KV812aA__original/img/38jB7fN07DwlrGKYAf-J0vsNdgs=/0x0/filters:format(jpeg)/pic1215633.jpg" alt="War of the Ring: Second Edition" loading="lazy" />
+          <div class="similar-card-body">
+            <div class="similar-name">War of the Ring: Second Edition</div>
+            <div class="similar-rank">#8 BGG</div>
+          </div>
+        </a>
+        <a href="/giochi/terraforming-mars/" class="similar-card">
+          <img src="https://cf.geekdo-images.com/wg9oOLcsKvDesSUdZQ4rxw__original/img/thIqWDnH9utKuoKVEUqveDixprI=/0x0/filters:format(jpeg)/pic3536616.jpg" alt="Terraforming Mars" loading="lazy" />
+          <div class="similar-card-body">
+            <div class="similar-name">Terraforming Mars</div>
+            <div class="similar-rank">#9 BGG</div>
+          </div>
+        </a>
+        <a href="/giochi/star-wars-rebellion/" class="similar-card">
+          <img src="https://cf.geekdo-images.com/7SrPNGBKg9IIsP4UQpOi8g__original/img/GKueTbkCk2Ramf6ai8mDj-BP6cI=/0x0/filters:format(jpeg)/pic4325841.jpg" alt="Star Wars: Rebellion" loading="lazy" />
+          <div class="similar-card-body">
+            <div class="similar-name">Star Wars: Rebellion</div>
+            <div class="similar-rank">#10 BGG</div>
+          </div>
+        </a>
+        <a href="/giochi/spirit-island/" class="similar-card">
+          <img src="https://cf.geekdo-images.com/kjCm4ZvPjIZxS-mYgSPy1g__original/img/9uLd9C3XAvInLCLhAoXqKVk56zs=/0x0/filters:format(jpeg)/pic7013651.jpg" alt="Spirit Island" loading="lazy" />
+          <div class="similar-card-body">
+            <div class="similar-name">Spirit Island</div>
+            <div class="similar-rank">#11 BGG</div>
+          </div>
+        </a>
+        <a href="/giochi/gloomhaven-jaws-of-the-lion/" class="similar-card">
+          <img src="https://cf.geekdo-images.com/_HhIdavYW-hid20Iq3hhmg__original/img/PBzsLRqNKQKJxGnzpb7o3qLWPQM=/0x0/filters:format(jpeg)/pic5055631.jpg" alt="Gloomhaven: Jaws of the Lion" loading="lazy" />
+          <div class="similar-card-body">
+            <div class="similar-name">Gloomhaven: Jaws of the Lion</div>
+            <div class="similar-rank">#12 BGG</div>
+          </div>
+        </a>
+      </div>
+      <a href="/giochi/" class="home-section-more">Vedi tutti i giochi →</a>
+    </section>
+
+    
+    <section class="home-section">
+      <h2 class="home-section-title">Sfoglia per categoria</h2>
+      <div class="game-tags">
+        <a href="/categorie/party-game/" class="tag">Party game</a><a href="/categorie/gioco-di-carte/" class="tag">Gioco di carte</a><a href="/categorie/fantasy/" class="tag">Fantasy</a><a href="/categorie/giochi-per-bambini/" class="tag">Giochi per bambini</a><a href="/categorie/strategia-astratta/" class="tag">Strategia astratta</a><a href="/categorie/avventura/" class="tag">Avventura</a><a href="/categorie/fantascienza/" class="tag">Fantascienza</a><a href="/categorie/deduzione/" class="tag">Deduzione</a>
+      </div>
+    </section>
+  </div></main>
+  <footer>
+    <p>© 2026 CompraeGioca — Comparatore prezzi giochi da tavolo</p>
+    <nav class="footer-nav">
+      <a href="/faq">FAQ</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/termini">Termini</a>
+      <button class="footer-link-btn" onclick="openCookieSettings()">Cookie</button>
+    </nav>
+  </footer>
+
+  <div id="cookie-banner" style="display:none">
+    <p>Questo sito usa Google Analytics per capire come viene utilizzato. Accetti i cookie analitici?</p>
+    <div class="cookie-actions">
+      <button id="cookie-accept">Accetta</button>
+      <button id="cookie-decline">Rifiuta</button>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var banner = document.getElementById('cookie-banner');
+
+      function bindBannerButtons() {
+        document.getElementById('cookie-accept').onclick = function() {
+          localStorage.setItem('ga_consent', 'yes');
+          banner.style.display = 'none';
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+        };
+        document.getElementById('cookie-decline').onclick = function() {
+          localStorage.setItem('ga_consent', 'no');
+          banner.style.display = 'none';
+        };
+      }
+
+      window.openCookieSettings = function() {
+        localStorage.removeItem('ga_consent');
+        banner.style.display = 'flex';
+        bindBannerButtons();
+      };
+
+      var consent = localStorage.getItem('ga_consent');
+      if (consent === 'yes') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      } else if (!consent) {
+        banner.style.display = 'flex';
+        bindBannerButtons();
+      }
+    })();
+  </script>
+</body>
+</html>
