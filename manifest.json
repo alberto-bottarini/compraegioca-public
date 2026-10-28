@@ -1,0 +1,16 @@
+{
+  "name": "CompraeGioca",
+  "short_name": "CompraeGioca",
+  "description": "Confronta i prezzi dei giochi da tavolo nei migliori negozi italiani.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#EBC01C",
+  "icons": [
+    { "src": "/favicon/android-logo-128x128.png", "sizes": "128x128", "type": "image/png" },
+    { "src": "/favicon/android-logo-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/favicon/apple-logo-180x180.png",   "sizes": "180x180", "type": "image/png" }
+  ],
+  "screenshots": [],
+  "categories": ["shopping", "games"]
+}
